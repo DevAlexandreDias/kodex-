@@ -37,7 +37,7 @@ p.lead{color:var(--mu);max-width:56ch;margin-top:20px}
 #c{position:absolute;inset:0;width:100%;height:100%;z-index:1}
 #hero h1 span{display:block;background:linear-gradient(90deg,#fff 40%,#7fc8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
 .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
-#load{position:fixed;inset:0;background:var(--bg);z-index:99;display:grid;place-items:center;transition:opacity .7s .5s,visibility 0s 1.2s}
+#load{position:fixed;inset:0;background:var(--bg);z-index:99;display:grid;place-items:center;transition:opacity .35s,visibility 0s .35s}
 #load .logo{font-size:26px;animation:pu 1s infinite alternate}#load .logo svg{width:60px;height:50px}#load small{font-size:11px}
 @keyframes pu{from{opacity:.3}to{opacity:1}}
 body.ready #load{opacity:0;visibility:hidden}
@@ -211,7 +211,7 @@ h2{max-width:22ch}
 .vt-feats li::before{content:"";flex:none;width:8px;height:8px;margin-top:.55em;border-radius:2px;background:linear-gradient(135deg,var(--cy),var(--ac))}
 .vt-ev{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .vt-ev span{border:1px solid rgba(18,168,255,.45);border-radius:99px;padding:5px 12px;font-size:12.5px;color:#c7e6ff}
-.vt-more{margin-top:56px}
+.vt-more{margin-top:56px}.pj-ic{height:92px;display:grid;place-items:center}.pj-ic svg{width:44px;height:44px;stroke:var(--cy);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;opacity:.9}
 .vt-more h3{font-size:13px;color:var(--mu);font-weight:500;letter-spacing:.04em}
 </style></head>
 <body>
@@ -222,7 +222,7 @@ h2{max-width:22ch}
 <div id="cur"></div><div id="sp"></div>
 <nav id="nav" data-a="aNav"><a class="logo" href="#hero" data-a="aHome"><img class="lg" data-logo alt=""></a>
 <ul><li><a href="#solutions" data-i="nS"></a></li><li><a href="#process" data-i="nP"></a></li><li><a href="#showcase" data-i="nG"></a></li><li><a href="#founder" data-i="nF"></a></li><li><a href="#faq" data-i="nQ"></a></li><li><a href="#contact" data-i="nC"></a></li></ul>
-<div class="nr"><div class="lang" role="group" data-a="aLang"><button id="lpt" aria-pressed="true" lang="pt-BR">PT-BR</button><button id="len" aria-pressed="false" lang="en">EN</button></div><a class="btn p mag" style="padding:9px 18px;font-size:14px" href="#contact" data-i="cta1"></a><button class="bg" id="bg" aria-expanded="false" aria-controls="drawer" data-a="aMenu"></button></div></nav>
+<div class="nr"><div class="lang" role="group" data-a="aLang"><button id="lpt" aria-pressed="true" lang="pt-BR">PT-BR</button><button id="len" aria-pressed="false" lang="en">EN</button></div><a class="btn p mag" id="nwa" style="padding:9px 18px;font-size:14px" href="#contact" target="_blank" rel="noopener" data-i="cta1"></a><button class="bg" id="bg" aria-expanded="false" aria-controls="drawer" data-a="aMenu"></button></div></nav>
 <div id="drawer"><a href="#solutions" data-i="nS"></a><a href="#process" data-i="nP"></a><a href="#showcase" data-i="nG"></a><a href="#founder" data-i="nF"></a><a href="#faq" data-i="nQ"></a><a href="#contact" data-i="nC"></a></div>
 <main id="main">
 <section id="hero"><canvas id="c" aria-hidden="true"></canvas>
@@ -247,9 +247,10 @@ h2{max-width:22ch}
 <div class="vt-info"><div><p class="vt-count" id="vtCount" aria-live="polite"></p><h3>Feira do Dia</h3><p data-i="vtDesc"></p><p class="vt-step" id="vtStep"></p></div>
 <div><ul class="vt-feats" id="vtFeats"></ul><div class="vt-ev" id="vtEv"></div></div></div>
 </div>
+<div class="vt-more"><h3 data-i="gH"></h3><div class="sol" id="gh"></div><p class="note" id="gst" role="status"></p>
+<a class="btn p mag" style="margin-top:18px" href="https://github.com/DevAlexandreDias?tab=repositories" target="_blank" rel="noopener" data-i="gAll"></a></div>
 <div class="vt-more"><h3 data-i="cMore"></h3><div class="sol" id="proj"></div></div></section>
-<section id="projects"><h2 class="rv" data-i="gH"></h2><p class="lead rv" data-i="gP"></p><div class="sol" id="gh"></div><p class="note" id="gst" role="status"></p>
-<a class="btn p mag" style="margin-top:18px" href="https://github.com/DevAlexandreDias?tab=repositories" target="_blank" rel="noopener" data-i="gAll"></a></section>
+
 <section id="why"><h2 class="rv" data-i="wH"></h2><ul class="why" id="whys"></ul>
 <div class="shift" id="shift"><div class="tg" role="group"><button id="b1" aria-pressed="true" data-i="m1"></button><button id="b2" aria-pressed="false" data-i="m2"></button></div>
 <div class="flow" id="flow"></div><p class="tech" id="fn"></p></div></section>
@@ -268,7 +269,7 @@ h2{max-width:22ch}
 <div><label for="n" data-i="fN"></label><input id="n" aria-describedby="n-err" autocomplete="name"><div class="err" id="n-err"></div></div>
 <div><label for="co" data-i="fC"></label><input id="co" aria-describedby="co-err" autocomplete="organization"><div class="err" id="co-err"></div></div>
 <div><label for="e" data-i="fE"></label><input id="e" aria-describedby="e-err" type="email" autocomplete="email"><div class="err" id="e-err"></div></div>
-<div><label for="w" data-i="fW"></label><input id="w" aria-describedby="w-err" type="tel" autocomplete="tel"><div class="err" id="w-err"></div></div>
+<div><label for="w" data-i="fW"></label><input id="w" aria-describedby="w-err" type="tel" inputmode="tel" autocomplete="tel" placeholder="(83) 99999-0000"><div class="err" id="w-err"></div></div>
 <div class="f"><label for="t" data-i="fT"></label><select id="t" aria-describedby="t-err"></select><div class="err" id="t-err"></div></div>
 <div class="f"><label for="d" data-i="fD"></label><textarea id="d" aria-describedby="d-err"></textarea><div class="err" id="d-err"></div></div>
 <div class="f"><button class="btn p mag" type="submit" data-i="fS"></button> <a class="btn mag" id="fwa" href="#contact" target="_blank" rel="noopener" data-i="fWa"></a></div>
@@ -289,8 +290,8 @@ const LOGO="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAADPCAYAAADcSOb7AA
 const D={
 pt:{title:"KODEX Technology — Construímos o que vem a seguir",desc:"A KODEX Technology cria software sob medida, automação e inteligência artificial para empresas.",
 aNav:"Navegação principal",aHome:"KODEX Technology, início",aLang:"Idioma",
-nA:"Sobre",nS:"Soluções",nP:"Processo",nR:"Conceitos",nC:"Contato",cta1:"Iniciar um projeto",cta2:"Conheça nossas soluções",
-h1a:"CONSTRUÍMOS",h1b:"O QUE VEM A SEGUIR.",hl:"Tecnologia criada para transformar negócios. Software inteligente, sistemas robustos e experiências digitais feitas para o futuro.",
+nA:"Sobre",nS:"Soluções",nP:"Processo",nR:"Conceitos",nC:"Contato",cta1:"Falar no WhatsApp",cta2:"Conheça nossas soluções",
+h1a:"CONSTRUÍMOS",h1b:"O QUE VEM A SEGUIR.",hl:"Sites, cardápios digitais com pedido no WhatsApp, lojas online e sistemas sob medida para empresas de João Pessoa e de todo o Brasil.",
 aH:"Tecnologia não é só o que construímos. É como impulsionamos negócios.",aP:"A KODEX Technology é uma empresa focada em criar soluções digitais que simplificam operações, abrem oportunidades e ajudam empresas a crescer.",
 p1t:"Engenharia",p1d:"Construímos software confiável, escalável e inteligente.",p2t:"Inovação",p2d:"Usamos tecnologias modernas para resolver problemas reais.",p3t:"Impacto",p3d:"Cada solução é pensada para gerar valor mensurável ao negócio.",
 sH:"Nossas soluções",sP:"Seis frentes em que criamos software ao redor do jeito que o seu negócio realmente funciona.",sCta:"Falar sobre esta solução",
@@ -310,15 +311,15 @@ wH:"Feito com propósito. Projetado para crescer.",W:["Soluções sob medida par
 m1:"Processo manual",m2:"Fluxo automatizado",F:[["E-mail","Cópia para planilha","Acompanhamento manual","Relatório feito à mão"],["Pedido recebido","Sincronização via API","Roteamento automático","Dashboard em tempo real"]],
 FN:["Os pedidos chegam por chat e e-mail, são copiados para planilhas e esperam alguém dar retorno.","Os pedidos são captados uma vez, roteados por regras, sincronizados por APIs e aparecem em um dashboard ao vivo."],
 kH:"Vamos construir algo extraordinário.",kP:"Tem uma ideia, um desafio ou um negócio que precisa de tecnologia melhor? Vamos conversar.",
-fN:"Nome",fC:"Empresa",fE:"E-mail",fW:"WhatsApp",fT:"Tipo de projeto",fD:"Descrição do projeto",fS:"Enviar solicitação de projeto",fWa:"Falar no WhatsApp",sel:"Escolha uma opção",
-eN:"Informe o seu nome.",eE:"Informe um e-mail válido.",eT:"Escolha o tipo de projeto.",eD:"Descreva o projeto com pelo menos 10 caracteres.",ok:"Abrindo o WhatsApp com a sua solicitação…",
+fN:"Nome",fC:"Empresa",fE:"E-mail (opcional)",fW:"WhatsApp com DDD",fT:"Tipo de projeto",fD:"Descrição do projeto",fS:"Enviar solicitação de projeto",fWa:"Falar no WhatsApp",sel:"Escolha uma opção",
+eN:"Informe o seu nome.",eE:"Confira o e-mail ou deixe em branco.",eW:"Informe o WhatsApp com DDD, como (83) 99999-0000.",eT:"Escolha o tipo de projeto.",eD:"Descreva o projeto com pelo menos 10 caracteres.",ok:"Abrindo o WhatsApp com a sua solicitação…",
 note:"Respondemos pelo WhatsApp. Ao enviar o formulário, abrimos uma conversa com os dados que você preencheu.",
 nF:"Fundador",nG:"Projetos",mH:"A mente por trás da KODEX.",mRole:"Fundador e Desenvolvedor",
 mBio1:"Alexandre Dias é o fundador da KODEX e estudante de Ciência da Computação na Faculdade Internacional da Paraíba (FPB). Apaixonado por tecnologia, engenharia de software e sistemas inteligentes, ele se dedica a criar soluções digitais que unem funcionalidade, design e inovação.",
 mBio2:"Seus interesses incluem desenvolvimento em Python, UX/UI design, inteligência artificial e machine learning, ampliando continuamente o conhecimento por meio dos estudos acadêmicos e de projetos práticos.",
 mEdu:"Estudante de Ciência da Computação — FPB (Faculdade Internacional da Paraíba)",mMl:"Estudando Machine Learning com base no curso de Andrew Ng, de Stanford (em andamento)",mGh:"Ver GitHub",
 mSk:["Sites","UX/UI","Engenharia de software","Inteligência artificial","Machine Learning","Python"],
-gH:"Projetos em Destaque",gP:"Um projeto real, com o código aberto no GitHub.",gAll:"Ver mais no GitHub",gOpen:"Ver repositório",gUp:"Atualizado em",gLoad:"Carregando projetos do GitHub…",gLive:"Dados atualizados direto da API do GitHub.",gErr:"Não foi possível consultar a API agora. Exibindo o último registro salvo, de 24/11/2026.",
+gH:"Também no ar",gP:"Um projeto real, com o código aberto no GitHub.",gAll:"Ver mais no GitHub",gOpen:"Ver repositório",gUp:"Atualizado em",gLoad:"Carregando projetos do GitHub…",gLive:"Dados atualizados direto da API do GitHub.",gErr:"Não foi possível consultar a API agora. Exibindo o último registro salvo, de 24/11/2026.",
 GD:["Site de apresentação de uma academia de jiu-jitsu, feito em HTML. O código está aberto no GitHub."],
 jH:"Sempre construindo. Sempre aprendendo.",jP:"Uma jornada de estudo e desenvolvimento em andamento, não uma lista de certificações.",
 J:[["Python","Programação, automação e desenvolvimento backend."],["UX/UI Design","Experiência do usuário, design de interfaces e visão de produto digital."],["Ciência da Computação","Base acadêmica em algoritmos, programação e pensamento computacional."],["Machine Learning","Estudo dos conceitos de machine learning pelo curso de Andrew Ng, de Stanford."],["IA e engenharia de software","Exploração de sistemas inteligentes e arquitetura moderna de software."]],
@@ -326,14 +327,14 @@ aMenu:"Abrir menu",skip:"Pular para o conteúdo",nQ:"FAQ",hWa:"Falar no WhatsApp
 auH:"Trabalhamos com restaurantes, lojas, academias, clínicas, construtoras e a sua empresa.",auP:"Se o seu negócio precisa de mais organização, mais clientes ou menos trabalho manual, a gente resolve com tecnologia simples de usar.",
 AU:["Restaurantes","Lanchonetes","Lojas","Academias","Clínicas","Construtoras","Prestadores de serviço","Você"],
 pH:"Se você sente que:",PN:[["O seu cardápio ou catálogo é um PDF perdido no WhatsApp","Criamos um catálogo digital rápido, com pedidos direto no WhatsApp."],["Os clientes não encontram o seu negócio na internet","Fazemos um site que apresenta a empresa e passa confiança."],["O controle está em planilhas e papel","Montamos um sistema com as regras do seu negócio."],["Vendas, contratos e atendimento ficam espalhados","Juntamos tudo em um só lugar, com automações e atendente virtual."]],
-pClose:"Não é falta de esforço. É falta de estrutura.",pCta:"Resolver isso agora",pCta2:"Ver como trabalhamos",
-qH:"Perguntas frequentes",QA:[["Quanto custa?","Depende do que você precisa. Conversamos sobre o projeto e enviamos uma proposta por escrito."],["Quanto tempo leva?","Depende do tamanho do projeto. Combinamos o prazo antes de começar."],["Preciso entender de tecnologia?","Não. Explicamos tudo em linguagem simples e cuidamos da parte técnica."],["Vocês acompanham depois da entrega?","Sim, combinamos o acompanhamento depois da entrega junto com a proposta."],["Como funciona o pagamento?","A forma de pagamento é definida na proposta, antes de começar."]],qCta:"Chamar no WhatsApp",
+pClose:"Não é falta de esforço. É falta de estrutura.",pCta:"Falar no WhatsApp",pCta2:"Ver como trabalhamos",
+qH:"Perguntas frequentes",QA:[["Quanto custa?","Depende do que você precisa. Conversamos sobre o projeto e enviamos uma proposta por escrito."],["Quanto tempo leva?","Depende do tamanho do projeto. Combinamos o prazo antes de começar."],["Preciso entender de tecnologia?","Não. Explicamos tudo em linguagem simples e cuidamos da parte técnica."],["Vocês acompanham depois da entrega?","Sim, combinamos o acompanhamento depois da entrega junto com a proposta."],["Como funciona o pagamento?","A forma de pagamento é definida na proposta, antes de começar."]],qCta:"Falar no WhatsApp",
 kSel:"O que você precisa?",WO:["Site institucional","Catálogo ou cardápio digital","Sistema sob medida","Automação e atendente virtual","Ainda não sei"],kPrev:"Mensagem que será enviada:",waMsg:"Olá! Vim pelo site da KODEX Technology e quero falar sobre: %s.",GT:["Site de academia de jiu-jitsu"],
 ftag:"Engenharia do amanhã, hoje.",fPh:"Links sociais provisórios",copy:"© 2026 KODEX Technology. Todos os direitos reservados."},
 en:{title:"KODEX Technology — We build what’s next",desc:"KODEX Technology engineers custom software, automation and artificial intelligence for businesses.",
 aNav:"Main navigation",aHome:"KODEX Technology, home",aLang:"Language",
-nA:"About",nS:"Solutions",nP:"Process",nR:"Concepts",nC:"Contact",cta1:"Start a project",cta2:"Explore our solutions",
-h1a:"WE BUILD",h1b:"WHAT’S NEXT.",hl:"Technology engineered to transform businesses. Intelligent software, powerful systems and digital experiences built for the future.",
+nA:"About",nS:"Solutions",nP:"Process",nR:"Concepts",nC:"Contact",cta1:"Chat on WhatsApp",cta2:"Explore our solutions",
+h1a:"WE BUILD",h1b:"WHAT’S NEXT.",hl:"Websites, digital menus with WhatsApp ordering, online stores and custom systems for businesses in João Pessoa and across Brazil.",
 aH:"Technology is not just what we build. It’s how we move businesses forward.",aP:"KODEX Technology is a company focused on engineering digital solutions that simplify operations, unlock opportunities and help businesses scale.",
 p1t:"Engineering",p1d:"We build reliable, scalable and intelligent software.",p2t:"Innovation",p2d:"We use modern technologies to solve real-world problems.",p3t:"Impact",p3d:"Every solution is designed to generate measurable business value.",
 sH:"Our solutions",sP:"Six areas where we build software around how your business actually works.",sCta:"Discuss this solution",
@@ -353,15 +354,15 @@ wH:"Built with purpose. Engineered for growth.",W:["Solutions tailored to each b
 m1:"Manual process",m2:"Automated workflow",F:[["Email","Copy to spreadsheet","Manual follow-up","Report by hand"],["Request in","API sync","Automated routing","Live dashboard"]],
 FN:["Requests arrive by chat and email, get copied into spreadsheets, and wait for someone to follow up.","Requests are captured once, routed by rules, synced through APIs and visible in a live dashboard."],
 kH:"Let’s build something extraordinary.",kP:"Have an idea, a challenge or a business that needs better technology? Let’s talk.",
-fN:"Name",fC:"Company",fE:"Email",fW:"WhatsApp",fT:"Type of project",fD:"Project description",fS:"Send project request",fWa:"Chat on WhatsApp",sel:"Choose one",
-eN:"Enter your name.",eE:"Enter a valid email address.",eT:"Choose a project type.",eD:"Describe your project in at least 10 characters.",ok:"Opening WhatsApp with your request…",
+fN:"Name",fC:"Company",fE:"Email (optional)",fW:"WhatsApp with area code",fT:"Type of project",fD:"Project description",fS:"Send project request",fWa:"Chat on WhatsApp",sel:"Choose one",
+eN:"Enter your name.",eE:"Check the email or leave it blank.",eW:"Enter your WhatsApp number with area code.",eT:"Choose a project type.",eD:"Describe your project in at least 10 characters.",ok:"Opening WhatsApp with your request…",
 note:"We reply on WhatsApp. When you send the form, we open a conversation with the details you filled in.",
 nF:"Founder",nG:"Projects",mH:"The Mind Behind KODEX",mRole:"Founder & Developer",
 mBio1:"Alexandre Dias is the founder of KODEX and a Computer Science student at Faculdade Internacional da Paraíba (FPB). Passionate about technology, software engineering and intelligent systems, he focuses on building digital solutions that combine functionality, design and innovation.",
 mBio2:"His interests include Python development, UX/UI design, artificial intelligence and machine learning, continuously expanding his knowledge through academic studies and practical projects.",
 mEdu:"Computer Science student — FPB (Faculdade Internacional da Paraíba)",mMl:"Studying Machine Learning through Stanford’s course by Andrew Ng (in progress)",mGh:"View GitHub",
 mSk:["Python","UX/UI","Software engineering","Web development","Artificial intelligence","Machine Learning"],
-gH:"Selected Engineering Projects",gP:"A real project, with the code open on GitHub.",gAll:"See more on GitHub",gOpen:"View repository",gUp:"Updated",gLoad:"Loading projects from GitHub…",gLive:"Data updated live from the GitHub API.",gErr:"Couldn’t reach the API right now. Showing the last saved snapshot from 24 Nov 2026.",
+gH:"Also live",gP:"A real project, with the code open on GitHub.",gAll:"See more on GitHub",gOpen:"View repository",gUp:"Updated",gLoad:"Loading projects from GitHub…",gLive:"Data updated live from the GitHub API.",gErr:"Couldn’t reach the API right now. Showing the last saved snapshot from 24 Nov 2026.",
 GD:["Presentation website for a jiu-jitsu academy, built in HTML. The code is open on GitHub."],
 jH:"Always Building. Always Learning.",jP:"An ongoing journey of study and development, not a list of certifications.",
 J:[["Python","Programming, automation and backend development."],["UX/UI Design","User experience, interface design and digital product thinking."],["Computer Science","Academic foundation in algorithms, programming and computational thinking."],["Machine Learning","Studying machine learning concepts through Stanford’s Andrew Ng course."],["AI & Software Engineering","Exploring intelligent systems and modern software architecture."]],
@@ -369,7 +370,7 @@ aMenu:"Open menu",skip:"Skip to content",nQ:"FAQ",hWa:"Chat on WhatsApp",aWa:"Ch
 auH:"We work with restaurants, shops, gyms, clinics, construction companies and your business.",auP:"If your business needs more organization, more customers or less manual work, we solve it with technology that is simple to use.",
 AU:["Restaurants","Snack bars","Shops","Gyms","Clinics","Construction companies","Service providers","You"],
 pH:"If you feel that:",PN:[["Your menu or catalog is a PDF lost in WhatsApp","We build a fast digital catalog with orders straight to WhatsApp."],["Customers can’t find your business online","We build a website that presents your company and builds trust."],["Control lives in spreadsheets and paper","We build a system around your business rules."],["Sales, contracts and support are scattered","We bring it all into one place, with automations and a virtual assistant."]],
-pClose:"It’s not a lack of effort. It’s a lack of structure.",pCta:"Solve this now",pCta2:"See how we work",
+pClose:"It’s not a lack of effort. It’s a lack of structure.",pCta:"Chat on WhatsApp",pCta2:"See how we work",
 qH:"Frequently asked questions",QA:[["How much does it cost?","It depends on what you need. We talk about the project and send a written proposal."],["How long does it take?","It depends on the size of the project. We agree on the deadline before we start."],["Do I need to understand technology?","No. We explain everything in plain language and handle the technical side."],["Do you follow up after delivery?","Yes, we agree on follow-up after delivery as part of the proposal."],["How does payment work?","The payment method is set in the proposal, before we start."]],qCta:"Chat on WhatsApp",
 kSel:"What do you need?",WO:["Institutional website","Digital catalog or menu","Custom system","Automation and virtual assistant","Not sure yet"],kPrev:"Message that will be sent:",waMsg:"Hello! I found KODEX Technology’s website and want to talk about: %s.",GT:["Jiu-jitsu academy website"],
 ftag:"Engineering tomorrow, today.",fPh:"Placeholder social links",copy:"© 2026 KODEX Technology. All rights reserved."}};
@@ -378,7 +379,7 @@ let auto=false,ghs='gLoad';
 const G=[["academia-rosenildo-francelino","HTML","2026-10-14"]],LC={Python:'#3572A5','Jupyter Notebook':'#DA5B0B',HTML:'#e34c26'};
 function gh(){const t=D[L],f=L==='pt'?'pt-BR':'en-US';$('#gh').innerHTML=G.map((r,i)=>`<article class="card tilt in"><div class="mock"><div class="bar"><b></b><b></b><b></b><span class="tech">${r[0]}</span></div><div class="bd gl"><span class="dot" style="background:${LC[r[1]]||'#888'}"></span>${r[1]}</div></div><h3>${t.GT[i]}</h3><p>${t.GD[i]}</p><p class="tech">${t.gUp} ${new Date(r[2]).toLocaleDateString(f)}</p><a class="btn mag" href="https://github.com/DevAlexandreDias/${r[0]}" target="_blank" rel="noopener">${t.gOpen}</a></article>`).join('');$('#gst').textContent=t[ghs]}
 const WA='5583998933003';let wi=4;
-function setWA(){const t=D[L],m=t.waMsg.replace('%s',t.WO[wi]),u='https://wa.me/'+WA+'?text='+encodeURIComponent(m);['#hwa','#wafab','#fwa','#qwa','#pwa'].forEach(i=>{const e=$(i);if(e)e.href=u});$('#wprev').textContent=m}
+function setWA(){const t=D[L],m=t.waMsg.replace('%s',t.WO[wi]),u='https://wa.me/'+WA+'?text='+encodeURIComponent(m);['#nwa','#hwa','#wafab','#fwa','#qwa','#pwa'].forEach(i=>{const e=$(i);if(e)e.href=u});$('#wprev').textContent=m}
 function ext2(){const t=D[L];$('#au').innerHTML=t.AU.map(x=>`<span class="chip">${x}</span>`).join('');
 $('#pn').innerHTML=t.PN.map(p=>`<div class="rv in"><b>${p[0]}</b><span>→ ${p[1]}</span></div>`).join('');
 $('#fq').innerHTML=t.QA.map(q=>`<details><summary>${q[0]}</summary><p>${q[1]}</p></details>`).join('');
@@ -397,7 +398,7 @@ $('#lpt').setAttribute('aria-pressed',L==='pt');$('#len').setAttribute('aria-pre
 $('#sol').innerHTML=t.S.map((s,i)=>`<article class="card tilt in"><span>${sv(i)}</span><h3>${s[0]}</h3><p>${s[1]}</p><ul>${s[2].map(x=>`<li>${x}</li>`).join('')}</ul><a class="btn mag" href="#contact" data-t="${i}">${t.sCta}</a></article>`).join('');
 $('#rail').innerHTML='<i id="prog"></i>'+t.ST.map(s=>`<div class="st"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('');
 $('#tech').innerHTML=Object.entries(t.TG).map(([k,v])=>`<div class="grp"><h3>${k}</h3><div class="chips">${v.map(x=>`<span class="chip">${x}</span>`).join('')}</div></div>`).join('');
-$('#proj').innerHTML=t.PJ.map(p=>`<article class="card tilt in"><div class="mock" data-m><div class="bar"><b></b><b></b><b></b></div><div class="bd">${'<s style="height:30%"></s>'.repeat(8)}</div></div><span class="tag">${t.tag}</span><h3>${p[0]}</h3><p>${p[1]}</p><p class="tech">${p[2]}</p><a class="btn mag" href="#contact">${t.prCta}</a></article>`).join('');
+$('#proj').innerHTML=t.PJ.map((p,i)=>`<article class="card tilt in"><div class="mock pj"><div class="bar"><b></b><b></b><b></b></div><div class="pj-ic">${sv([2,1,5,3,4][i]??0)}</div></div><span class="tag">${t.tag}</span><h3>${p[0]}</h3><p>${p[1]}</p><p class="tech">${p[2]}</p><a class="btn mag" href="#contact">${t.prCta}</a></article>`).join('');
 $('#whys').innerHTML=t.W.map(x=>`<li>${x}</li>`).join('');
 const v=$('#t').value;$('#t').innerHTML=`<option value="">${t.sel}</option>`+t.S.map((s,i)=>`<option value="${i}">${s[0]}</option>`).join('');$('#t').value=v;extra();
 flow();document.querySelectorAll('.err').forEach(e=>e.textContent='');$('#ok').textContent='';
@@ -409,9 +410,9 @@ $('#b1').onclick=()=>{auto=false;flow()};$('#b2').onclick=()=>{auto=true;flow()}
 function setL(l){if(l===L)return;L=l;try{localStorage.setItem('kdx-lang',l)}catch(e){}const m=$('#main');m.classList.add('sw');setTimeout(()=>{render();m.classList.remove('sw')},rm?0:250)}
 $('#lpt').onclick=()=>setL('pt');$('#len').onclick=()=>setL('en');
 $('#form').addEventListener('submit',e=>{e.preventDefault();const t=D[L];let ok=true;
-[['n',v=>v.trim().length>1,t.eN],['e',v=>/^\S+@\S+\.\S+$/.test(v),t.eE],['t',v=>v!=='',t.eT],['d',v=>v.trim().length>9,t.eD]].forEach(([id,f,m])=>{const el=document.getElementById(id),g=f(el.value);el.parentNode.querySelector('.err').textContent=g?'':m;el.setAttribute('aria-invalid',!g);if(!g){if(ok)el.focus();ok=false}});
+[['n',v=>v.trim().length>1,t.eN],['e',v=>!v.trim()||/^\S+@\S+\.\S+$/.test(v),t.eE],['w',v=>{const d=v.replace(/\D/g,'');return d.length>=10&&d.length<=13},t.eW],['t',v=>v!=='',t.eT],['d',v=>v.trim().length>9,t.eD]].forEach(([id,f,m])=>{const el=document.getElementById(id),g=f(el.value);el.parentNode.querySelector('.err').textContent=g?'':m;el.setAttribute('aria-invalid',!g);if(!g){if(ok)el.focus();ok=false}});
 $('#ok').textContent=ok?t.ok:'';if(ok){const g=i=>$('#'+i).value.trim(),ty=$('#t').selectedOptions[0].text,co=g('co'),w=g('w'),pt=L==='pt';
-const m=(pt?`Olá! Meu nome é ${g('n')}${co?', da '+co:''}. Quero falar sobre: ${ty}.\n\n${g('d')}\n\nE-mail: ${g('e')}${w?'\nWhatsApp: '+w:''}`:`Hello! My name is ${g('n')}${co?', from '+co:''}. I want to talk about: ${ty}.\n\n${g('d')}\n\nEmail: ${g('e')}${w?'\nWhatsApp: '+w:''}`);
+const m=(pt?`Olá! Meu nome é ${g('n')}${co?', da '+co:''}. Quero falar sobre: ${ty}.\n\n${g('d')}\n\nWhatsApp: ${w}${g('e')?'\nE-mail: '+g('e'):''}`:`Hello! My name is ${g('n')}${co?', from '+co:''}. I want to talk about: ${ty}.\n\n${g('d')}\n\nWhatsApp: ${w}${g('e')?'\nEmail: '+g('e'):''}`);
 window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(m),'_blank','noopener');e.target.reset()}});
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.15});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
@@ -420,7 +421,7 @@ addEventListener('scroll',sc,{passive:true});
 const fine=!rm&&matchMedia('(hover:hover)').matches;
 function bind(){if(!fine)return;
 document.querySelectorAll('.tilt').forEach(c=>{if(c._b)return;c._b=1;c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(800px) rotateY(${x*8}deg) rotateX(${-y*8}deg)`});c.addEventListener('mouseleave',()=>c.style.transform='')});
-document.querySelectorAll('.mag').forEach(b=>{if(b._b)return;b._b=1;b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.2}px,${(e.clientY-r.top-r.height/2)*.3}px)`});b.addEventListener('mouseleave',()=>b.style.transform='')})}
+}
 if(fine){const cu=$('#cur');addEventListener('mousemove',e=>{cu.style.left=e.clientX+'px';cu.style.top=e.clientY+'px';cu.classList.toggle('h',!!e.target.closest('a,button,.card'))})}
 
 let vi=0;
@@ -468,8 +469,8 @@ function f(t){requestAnimationFrame(f);if(!vis)return;t*=.001;if(t0===null)t0=t;
 logo.rotation.y=(rm?0:Math.sin(t*.5)*.7)+(1-e)*-2.6+mx*.3;logo.rotation.x=my*.3;g.scale.setScalar(bs*(.55+.45*e));
 g.position.y=by+(rm?0:Math.sin(t)*.1);if(!rm){pts.rotation.y=t*.02;l2.position.x=Math.sin(t*.8)*5}
 cam.position.x+=(mx*1.2-cam.position.x)*.04;cam.position.y+=(-my*.8-cam.position.y)*.04;cam.lookAt(0,0,0);R.render(sc,cam)}
-f(0);setTimeout(()=>document.body.classList.add('ready'),900)})();
-setTimeout(()=>document.body.classList.add('ready'),2500);
+f(0)})();
+document.body.classList.add('ready');
 
 (function(){const b=$('#bg'),dr=$('#drawer');const set=o=>{dr.classList.toggle('open',o);b.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''};
 b.onclick=()=>set(!dr.classList.contains('open'));dr.querySelectorAll('a').forEach(a=>a.onclick=()=>set(false));addEventListener('keydown',e=>{if(e.key==='Escape')set(false)});
